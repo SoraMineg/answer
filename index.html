@@ -1,114 +1,244 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="background.png">
-    <title>ロケ</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="responsive.css">
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div class="header-left">
-          <!--<img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">-->
-          <a href="#">「真実の行方」の答えページ</a>
-        </div>
-        <span class="fa fa-bars menu-icon"></span>
+* {
+    box-sizing: border-box;
+  }
   
-        <!--<div class="header-right">
-          <a href="#">レッスン</a>
-          <a href="#">新規登録</a>
-          <a href="#" class="login">ログイン</a>
-        </div>-->
-      </div>
-    </header>
-    <div class="top-wrapper">
-      <div class="container">
-        <h1>真実の行方</h1>
-        <!--<h1>LEARN TO BE CREATIVE.</h1>-->
-        <p>謎解きツアー”真実の行方”のヒント&答えを発信する公式アカウントです。新宿中央公園にて二月の中旬から配信予定。</p>
-        <div class="btn-wrapper">
-          <a href="#" class="btn facebook"><!--<span class="fa fa-facebook"></span>-->Locatoneをインストール</a>
-          <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Xをフォロー</a>
-        </div>
-      </div>
-    </div>
-    <div class="lesson-wrapper">
-      <div class="container">
-        <div class="heading">
-          <h2>答えはこちら</h2>
-        </div>
-        <div class="lessons">
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/html.png">
-              
-              <details>
-                <summary>第①問</summary>
-                <div class="inner">
-                    <img src="">
-                </div>
-              </details>
-            </div>
-            <p class="text-contents">ヒント：</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-              <details>
-                <summary>第②問</summary>
-                <div class="inner">
-                    <img src="">
-                </div>
-              </details>
-            </div>
-            <p class="text-contents">ヒント：</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/ruby.png">
-              <details>
-                <summary>第③問</summary>
-                <div class="inner">
-                    <img src="">
-                </div>
-              </details>
-            </div>
-            <p class="text-contents">ヒント：</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/php.png">
-              <details>
-                <summary>第④問</summary>
-                <div class="inner">
-                    <img src="">
-                </div>
-              </details>
-            </div>
-            <p class="text-contents">ヒント：</p>
-          </div>
-          <div class="clear"></div>
-        </div>
-      </div>
-    </div>
-    <div class="message-wrapper">
-      <div class="container">
-        <div class="heading">
-          <h2>謎解きお疲れ様です</h2>
-          <h3>撮ったAR写真をSNSで共有しよう</h3>
-        </div>
-        <a href="#" class="btn message">共有</a>
-      </div>
-    </div>
-    <!--<footer>
-      <div class="container">
-        <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-        <p>Learn to code, learn to be creative.</p>
-      </div>
-    </footer>-->
-  </body>
-</html>
+  body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .clear {
+    clear: left;
+  }
+  
+  .container {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  
+  .top-wrapper {
+    
+    padding: 180px 0 100px 0;
+    background-image: url(background.png);
+    background-size: cover;
+    color: white;
+    text-align: center;
+  }
+  
+  .top-wrapper h1 {
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.7),   /* 右下に黒い影 */
+        -2px -2px 4px rgba(0, 0, 0, 0.7), /* 左上に黒い影 */
+        2px -2px 4px rgba(0, 0, 0, 0.7),  /* 右上に黒い影 */
+        -2px 2px 4px rgba(0, 0, 0, 0.7);  /* 左下に黒い影 */
+    opacity: 0.7;
+    font-size: 45px;
+    letter-spacing: 5px;
+  }
+  
+  .top-wrapper p {
+    opacity: 0.7;
+  }
+  
+  .btn-wrapper {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .btn-wrapper p {
+    margin: 10px 0;
+  }
+  
+  .signup {
+    background-color: #239b76;
+  }
+  
+  .facebook {
+    background-color:  #55acee;
+    margin-right: 10px;
+  }
+  
+  .twitter {
+    background-color: black;
+  }
+  
+  .btn {
+    padding: 8px 24px;
+    color: white;
+    display: inline-block;
+    opacity: 0.8;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+  }
+  
+  .fa {
+    margin-right: 5px;
+  }
+  
+  header {
+    height: 65px;
+    width: 100%;
+    background-color: rgba(34, 49, 52, 0.9);
+    position :fixed;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .logo {
+    width: 124px;
+    margin-top: 20px;
+  }
+  
+  .header-left {
+    float: left;
+    margin-top:10px;
+    font-size:25px;
+  }
+  
+  .header-right {
+    float: right;
+    margin-right: -25px;
+  }
+  
+  .header-right a {
+    line-height: 65px;
+    padding: 0 25px;
+    color: white;
+    display: block;
+    float: left;
+    transition: all 0.5s;
+  }
+  
+  .header-right a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* menu-iconのCSSを貼り付けてください */
+  .menu-icon {
+    color: white;
+    float: right;
+    font-size: 25px;
+    padding: 21px 0;
+    /* displayをnoneに指定してください */
+    display: none;
+  }
+  
+  
+  .lesson-wrapper {
+    padding-bottom: 80px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #f7f7f7;
+    text-align: center;
+  }
+  
+  .heading {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    color: #5f5d60;
+  }
+  
+  .heading h2 {
+    font-weight: normal;
+  }
+  
+  .lesson {
+    float: left;
+    width: 25%;
+  }
+  
+  .lesson-icon {
+    position: relative;
+  }
+  
+  .lesson-icon details {
+    position: absolute;
+    top: 44%;
+    width: 100%;
+    color: white;
+  }
+  .lesson-icon h1{
+    color:black;
+  }
+  
+  .text-contents {
+    width: 80%;
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #b3aeb5;
+  }
+  
+  .heading h3 {
+    font-weight: normal;
+  }
+  
+  .message-wrapper {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 80px;
+    text-align: center;
+  }
+  
+  .message {
+    padding: 15px 40px;
+    background-color: #5dca88;
+    box-shadow: 0 7px #1a7940;
+  }
+  
+  .message:active {
+    position: relative;
+    top: 7px;
+    box-shadow: none;
+  }
+  
+  footer img {
+    width: 125px;
+  }
+  
+  footer p {
+    color: #b3aeb5;
+    font-size: 12px;
+  }
+  
+  footer {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  /***追従するトップへ戻るボタン***/
+#page-top {
+    position: fixed;
+    right: 5px;
+    bottom: 20px;
+    height: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transform: rotate(90deg);
+    font-size: 90%;
+    line-height: 1.5rem;
+    color: #737373;
+    padding: 0 0 0 35px;
+    border-top: solid 1px;
+    color: #ffbf70;
+  }
+  #page-top::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: 0px;
+    width: 15px;
+    border-top: solid 1px;
+    transform: rotate(35deg);
+    transform-origin: left top;
+    color: #ffbf70;
+  }
